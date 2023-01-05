@@ -5,7 +5,7 @@ output: html_document
 ---
 
 
-Analyses were run using Pehlivanova et al's n427 sample and then running restQA exclusions on them (all this information was from Pehlivanova .csvs). The .csvs for this are available in the `samplerecreation` folder in this Repo.
+Analyses were run using [Pehlivanova et al](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5858592/)'s n427 sample and then running restQA exclusions on them (all this information was from Pehlivanova .csvs). The .csvs for this are available in the `samplerecreation` folder in this Repo.
 
 All final analyses were run in `/cbica/projects/pncitc/ignore`.
 
