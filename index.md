@@ -1,6 +1,4 @@
-# PNC-ITC
-
-The repository for this project is [here](https://github.com/kahinimehta/pncitc)
+The repository for this project is available[here](https://github.com/PennLINC/pncitc).
 
 
 Analyses were run using [Pehlivanova et al](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5858592/)'s n427 sample and then running restQA exclusions on them (all this information was from Pehlivanova .csvs). The .csvs for this are available in the `samplerecreation` folder in this project's repo.
@@ -681,6 +679,7 @@ singularity exec -e -B /cbica/projects/pncitc  \
 /usr/local/bin/Rscript /usr/local/bin/connectir_mdmr.R -i /cbica/projects/pncitc/ignore/cwas293age -f 'logk*age+sex+relMeanRMSmotion' -m /cbica/projects/pncitc/samplerecreation/n293_demographics.csv --factors2perm='logk:age' --save-perms -c 5 -t 5  --ignoreprocerror --memlimit=300 logk_motion_sex_age
 ```
 3. For clustering, I created two directories: `cluster_output_sex` and `cluster_output_age`. The scripts I used for clustering were as below: 
+
 ```
 # for sex
 #!/bin/bash # NO NEED TO QSUB
@@ -698,6 +697,7 @@ No significant clusters were found.
 ### 8. SES and age effects on behavioral data
 1. I obtained maternal level of education from  `/cbica/projects/pncitc/dropbox/pehlivanovaPncItc/subjectData/demoBehavData/n452_pnc_itc_whole_sample_201608256.csv`
 2. I merged it with `n293_data.csv` using `R` and saved `n293_full_demo_data.csv` to the `demographics` directory on CBICA: 
+
 ```
 setwd("/Users/kahinim/Desktop")
 
@@ -708,6 +708,7 @@ pncitc=merge(demo,data, by=c('bblid','scanid')) # merge by Ids
 write.csv(pncitc,'n293_full_demo_data.csv',quote = FALSE,row.names = FALSE)
 ```
 3. After obtaining this data, I used R to run a bivariate analysis: 
+
 ```
 age = pncitc$age
 medu1 = pncitc$meduCnbGo1
@@ -720,6 +721,7 @@ plot(logk~age)
 reg_ses = lm(logk~ses)
 plot(logk~ses)
 ```
+
 4. There appeared to be a correlation of -0.155 for SES
 5. We conducted sensitivity analysis with SES but the results did not change. The code for this is here: 
 
@@ -778,8 +780,6 @@ edu = (medu+fedu)/2
 pncit1$edu = edu
 pncit1=pncit1[which(pncit1$edu>0.0),] # remove NaN values
 write.csv(pncit1,'n282_demographics.csv',row.names = FALSE,quote = FALSE)
-
-
 ```
 
 #### 1. CWAS-MDMR
@@ -802,7 +802,6 @@ rm  -rf $mdmrouput # remove previous run if exist
 metric=pearson # pearson correlation 
 # compute distance matrix
 singularity exec -e -B /cbica/projects/pncitc $singimage $scriptdir/Rscript $scriptdir/connectir_subdist.R $mdmrouput --infuncs1=$imagelist --ztransform --automask1  -c 3 -t 4 --brainmask1=$brainmask --method="$metric" --bg=$bgim  --overwrite --memlimit=200
-
 ```
 
 The output of distance matrix: `/cbica/projects/pncitc/finalreplication/cwas282`
