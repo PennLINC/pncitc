@@ -1,4 +1,10 @@
-The repository for this project is available[here](https://github.com/PennLINC/pncitc).
+---
+layout: default
+title: PNC ITC
+nav_order: 1
+---
+
+The repository for this project is available [here](https://github.com/PennLINC/pncitc).
 
 
 Analyses were run using [Pehlivanova et al](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5858592/)'s n427 sample and then running restQA exclusions on them (all this information was from Pehlivanova .csvs). The .csvs for this are available in the `samplerecreation` folder in this project's repo.
