@@ -1,10 +1,3 @@
----
-layout: default
-title: PNCITC
-has_children: false
-parent: Current Projects
----
-
 # Project Title
 Individual Differences in Delay Discounting are Associated with Dorsal Prefrontal Cortex Connectivity in Youth 
 
