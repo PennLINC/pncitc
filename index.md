@@ -1,11 +1,9 @@
----
-title: "PNC-ITC"
-authors: Kahini
-output: html_document
----
+# PNC-ITC
+
+The repository for this project is [here](https://github.com/kahinimehta/pncitc)
 
 
-Analyses were run using [Pehlivanova et al](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5858592/)'s n427 sample and then running restQA exclusions on them (all this information was from Pehlivanova .csvs). The .csvs for this are available in the `samplerecreation` folder in this Repo.
+Analyses were run using [Pehlivanova et al](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5858592/)'s n427 sample and then running restQA exclusions on them (all this information was from Pehlivanova .csvs). The .csvs for this are available in the `samplerecreation` folder in this project's repo.
 
 All final analyses were run in `/cbica/projects/pncitc/ignore`.
 
@@ -66,7 +64,7 @@ write.csv(pncit1,'n293_demographics.csv',row.names = FALSE,quote = FALSE)
 
 The computation of  CWASMDMR was  done with  `cwasmdr` singularity image (`/cbica/projects/pncitc/cwasmdmr.simg`). We used packages from the connectir project at [https://github.com/czarrar/connectir](https://github.com/czarrar/connectir)
 
-Distance matrix was first computed with the following script, using masks under the `subjectData` folder in this repo: 
+Distance matrix was first computed with the following script, using masks under the `subjectData` folder in this project's repo: 
 
 ```
 #!/bin/bash
@@ -229,7 +227,7 @@ A mask was generated from the cluster_z3_09.nii, using fslmath at `/cbica/projec
 fslmaths cluster_Z3.09.nii.gz -thr 1 -uthr 2 mask1/mask1.nii.gz
 ```
 
-The mask generated was again in .hdr and .img format, so I used `fslchfiletype` as before to turn them into niftis.The mask was upsampled from 4mm to 2mm and was used as a seed for seed-based correlation. This upsampling was done using the pnc_2mm template, found under `subjectData` in this repo. 
+The mask generated was again in .hdr and .img format, so I used `fslchfiletype` as before to turn them into niftis.The mask was upsampled from 4mm to 2mm and was used as a seed for seed-based correlation. This upsampling was done using the pnc_2mm template, found under `subjectData` in this project's repo. 
 
 The code used for this was: 
 
@@ -359,7 +357,7 @@ In the directory, there are zvalues:
 ### 5. Vizualisation of Results - iPython in CBICA
 
 All computations were done in PNC template. For vizualisation, all the nifti files were tranformed to MNI before as below. Transform
-files are available in this repository under `PNC_transforms`. 
+files are available in this project's repo under `PNC_transforms`. 
 
 #### Transform to MNI
 ```
