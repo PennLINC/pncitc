@@ -1005,6 +1005,6 @@ write.table(data_r, file = "/Users/kahinim/Desktop/L_mean_data.txt", sep = "", r
 
 ```
 
-Then, using the code detailed in the `spin_test` folder here, Dr. Erica Baller performed the actual spin testing.  
+Then, using the code detailed in the `spin_test` folder in this project's repo, Dr. Erica Baller performed the actual spin testing.  
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
