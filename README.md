@@ -1006,4 +1006,7 @@ write.table(data_r, file = "/Users/kahinim/Desktop/L_mean_data.txt", sep = "", r
 
 Then, using the code detailed in the `spin_test` folder here, Dr. Erica Baller performed the actual spin testing.  
 
+### 8. Code added during revision
+
+1. The histogram was created using R using `hist`
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
