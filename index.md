@@ -724,6 +724,8 @@ plot(logk~age)
 reg_ses = lm(logk~ses)
 plot(logk~ses)
 ```
+I also used the mgcv package to check for nonlinear age effects, as in Pehlivanova et al., 2018, using  logk ~ s(age). This yielded a GCV score of 2.246636.
+
 
 4. There appeared to be a correlation of -0.155 for SES
 5. We conducted sensitivity analysis with SES but the results did not change. The code for this is here: 
@@ -784,6 +786,7 @@ pncit1$edu = edu
 pncit1=pncit1[which(pncit1$edu>0.0),] # remove NaN values
 write.csv(pncit1,'n282_demographics.csv',row.names = FALSE,quote = FALSE)
 ```
+I also used the mgcv package to check for nonlinear age effects, as in Pehlivanova et al., 2018, using  logk ~ s(age). This yielded a GCV score of 2.246636.
 
 #### 1. CWAS-MDMR
 
