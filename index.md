@@ -1010,4 +1010,5 @@ Then, using the code detailed in the `spin_test` folder in this project's repo, 
 ### 8. Code added during revision
 
 1. The histogram was created using R using `hist` - `hist(k,main="Distribution of k Values", xlab="k Values",col="blue", font=2, freq=TRUE, family="times")`
+2. Additionally, to address comments from reviewers, we re-ran the original model with the covariate `kTjur` sourced from `n452_pnc_itc_whole_sample_20160825.csv` as before. This meant re-running the MDMR with the formula `logk+relMeanRMSmotion+sex+age+kTjur` in the folder `/cbica/projects/pncitc/Tjur`. 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
