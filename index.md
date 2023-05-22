@@ -1012,4 +1012,6 @@ Then, using the code detailed in the `spin_test` folder in this project's repo, 
 2. To address comments from reviewers, we re-ran the original model with the covariate `kTjur` sourced from `n452_pnc_itc_whole_sample_20160825.csv` as before. This meant re-running the MDMR with the formula `logk+relMeanRMSmotion+sex+age+kTjur` in the folder `/cbica/projects/pncitc/ignore/logk_motion_sex_age_Tjur`. 
 3. Additionally, to address comments from reviewers, we re-ran the original model with the covariates `psyc1` sourced from `n293_psych_cog.csv` (see `samplerecreation` folder) as before. This was an overall psycopathology factor from clinical interviewing. This meant re-running the MDMR with the formula `logk+relMeanRMSmotion+sex+age+psyc1` in the folder `/cbica/projects/pncitc/ignore/logk_motion_sex_age_psych`. 
 4. Finally, to address comments from reviewers, we re-ran the original model with the covariate `cog2` sourced from `n293_psych_cog.csv` as before. This was an overall accuracy measure from CNBs. This meant re-running the MDMR with the formula `logk+relMeanRMSmotion+sex+age+cog2` in the folder `/cbica/projects/pncitc/ignore/logk_motion_sex_age_cog2`.
+
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
